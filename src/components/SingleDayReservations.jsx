@@ -1,28 +1,34 @@
-import React from "react";
-import { Row, Col, Button } from "reactstrap";
-import { Field } from "redux-form";
-import _map from "lodash";
-import _capitalize from "lodash/capitalize";
-import TimePickerWrapper from "./TimePickerWrapper";
+import React from 'react';
+import { Row, Col, Button } from 'reactstrap';
+import { Field } from 'redux-form';
+import _capitalize from 'lodash/capitalize';
+import TimePickerWrapper from './TimePickerWrapper';
 
-const SingleDayReservations = ({ fields }) => {
+const SingleDayReservations = ({ fields, meta: { error } }) => {
   return [
-    <Row>
+    <Row key="header">
       <Col>
         <h5>{_capitalize(fields.name)}</h5>
+        <span className="reservations__error">{error}</span>
       </Col>
     </Row>,
-    <Row>
+    <Row key="entry">
       {fields.map((name, index) => (
         <Row
-          key={`single-entry-${index}`}
+          key={`${name}-${index}`}
           className="reservations__single-entry"
         >
           <Col xs={{ size: 3, offset: 1 }}>
-            <Field name={`[${index}].start`} component={TimePickerWrapper} />
+            <Field
+              name={`${name}.start`}
+              component={TimePickerWrapper}
+            />
           </Col>
           <Col xs={{ size: 3, offset: 2 }}>
-            <Field name={`[${index}].end`} component={TimePickerWrapper} />
+            <Field
+              name={`${name}.end`}
+              component={TimePickerWrapper}
+            />
           </Col>
           <Col xs={{ size: 1, offset: 1 }}>
             <Button
@@ -38,7 +44,7 @@ const SingleDayReservations = ({ fields }) => {
         </Row>
       ))}
     </Row>,
-    <Row>
+    <Row key="footer">
       <Col xs={{ size: 3, offset: 6 }}>
         <Button
           onClick={() => {
@@ -50,7 +56,7 @@ const SingleDayReservations = ({ fields }) => {
           + Add Entry
         </Button>
       </Col>
-    </Row>
+    </Row>,
   ];
 };
 
