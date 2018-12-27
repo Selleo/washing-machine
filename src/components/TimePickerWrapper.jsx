@@ -1,18 +1,24 @@
-import React from "react";
-import DatePicker from "react-datepicker";
+import React from 'react';
+import DatePicker from 'react-datepicker';
 
-const TimePickerWrapper = ({ input: { onChange, value }, meta: { error } }) => {
-  console.log(value);
+const TimePickerWrapper = ({
+  input: { onChange, value },
+  meta: { error },
+}) => {
+  console.log(error);
   return (
-    <DatePicker
-      selected={value}
-      onChange={onChange}
-      showTimeSelect
-      showTimeSelectOnly
-      timeIntervals={15}
-      dateFormat="h:mm aa"
-      timeCaption="Time"
-    />
+    <React.Fragment>
+      <DatePicker
+        selected={value}
+        onChange={onChange}
+        showTimeSelect
+        showTimeSelectOnly
+        timeIntervals={15}
+        dateFormat="h:mm aa"
+        timeCaption="Time"
+      />
+      <span className="reservations__error">{error}</span>
+    </React.Fragment>
   );
 };
 export default TimePickerWrapper;

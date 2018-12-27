@@ -1,20 +1,31 @@
-import React, { PureComponent } from "react";
-import { connect } from "react-redux";
-import { reduxForm, FieldArray, Form } from "redux-form";
-import { Button, Container, Row, Col } from "reactstrap";
-import _map from "lodash/map";
-import ReactJson from "react-json-view";
+import React from 'react';
+import { connect } from 'react-redux';
+import { reduxForm, FieldArray, Form } from 'redux-form';
+import { Button, Container, Row, Col } from 'reactstrap';
+import _map from 'lodash/map';
+import ReactJson from 'react-json-view';
 
-import { WEEK_DAYS } from "../common/constants";
-import { clearReservations, saveReservations } from "../actions/machine";
-import SingleDayReservations from "./SingleDayReservations";
-import "./Reservations.scss";
+import { WEEK_DAYS } from '../common/constants';
+import {
+  clearReservations,
+  saveReservations,
+} from '../actions/machine';
+import SingleDayReservations from './SingleDayReservations';
+import './Reservations.scss';
+
+const validate = values => {
+  const errors = {
+    // monday: [{ start: 'must be present' }],
+    //tuesday: { _error: 'error' },
+  };
+  return errors;
+};
 
 const Reservations = ({
   clearReservations,
   handleSubmit,
   machine,
-  saveReservations
+  saveReservations,
 }) => (
   <Container className="reservations">
     <Form onSubmit={handleSubmit(saveReservations)}>
@@ -49,20 +60,21 @@ const Reservations = ({
 
 const mapStateToProps = state => ({
   machine: state.machine,
-  initialValues: state.machine
+  initialValues: state.machine,
 });
 
 const mapDispatchToProps = {
   clearReservations,
-  saveReservations
+  saveReservations,
 };
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(
   reduxForm({
-    form: "reservations",
-    enableReinitialize: true
-  })(Reservations)
+    form: 'reservations',
+    validate,
+    enableReinitialize: true,
+  })(Reservations),
 );
