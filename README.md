@@ -16,9 +16,7 @@ or coresponding `npm` commands
 
 you can reach server at `localhost:3000`
 
-### To finish your MVP you need to achieve those points:
-
----
+## To finish your MVP you need to achieve those points:
 
 1. Add validation of reservations that will check
 
@@ -54,6 +52,8 @@ Durring implementation you should not bother about huge amounts of loops and rep
 ---
 
 3. In the reservation form add new input in a single reservation entry. It should be selected with the list of all the users. Make this value required in validation - because you need to know who made the reservation.
+
+---
 
 You can change whatever file you want, introduce new libraries to the project, and so on...
 
