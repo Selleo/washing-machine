@@ -4,7 +4,7 @@ You are living in a student's dorm. It is quite small and has only one washing m
 
 You need to handle reservations somehow, you used to write it down on a piece of paper, but since you are the great React/JavaScript master you decide to write a small form that will handle it.
 
-Let's say that you want to start with a MVP, you want a simple form that allows you to pass the times of reservations per week, you start with one week view that will represent current week's reservations. You decide to use redux-persist to keep the state of reservations on you local computer and redux-form to manage changes. To setup time you have redux-datapicker library - it does not look pretty but it is good enough. To make the page look better you decide to use reactstrap (react bootstrap library), you also have lodash, scss and moment on your project, but you can add anything you wish. You use react-json-view to view the current state of reservations.
+Let's say that you want to start with a MVP, you want a simple form that allows you to enter the times of reservations per week days. You start with one week view that will represent current week's reservations. You decide to use redux-persist to keep the state of reservations on you local computer and redux-form to manage changes. To setup time you have redux-datapicker library - it does not look pretty but it is good enough. To make the page look better you decide to use reactstrap (react bootstrap library), you also have lodash, scss and moment on your project, but you can add anything you wish. You use react-json-view to view the current state of reservations.
 
 (Fork this repository and work on your copy.)
 
