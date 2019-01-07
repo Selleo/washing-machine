@@ -21,7 +21,9 @@ you can reach server at `localhost:3000`
 - if both `start` and `end` is present and set (will show under single wrong entry)
 - if `end` time is after `start` (will show under single wrong entry)
 - if duration of the reservation is not longer than 2:30h (will show under single wrong entry)
-  If all of the above pass you need to check:
+  
+  #### If all of the above pass you need to check:
+  
 - if two reservations on same day do not collide (show this under day's name)
 - if two reservations are not too close - there should be minimum 15min to switch keys (show this under the day's name)
 
