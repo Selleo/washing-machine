@@ -18,7 +18,7 @@ you can reach server at `localhost:3000`
 
 ## To finish your MVP you need to achieve those points:
 
-1. Add validation of reservations that will check
+### 1. Add validation of reservations that will check
 
 - if both `start` and `end` is present and set (will show under start/end input - 'Can not be empty')
 - if `end` time is after `start` (will show under end input - 'End time should be after start time')
@@ -39,7 +39,7 @@ Durring implementation you should not bother about huge amounts of loops and rep
 
 ---
 
-2. You need to add additional store for users
+### 2. You need to add additional store for users
 
 - add some router to the project and add additional route for users - eg. /users
 - add some navigation buttons - use you good taste to style it
@@ -51,7 +51,7 @@ Durring implementation you should not bother about huge amounts of loops and rep
 
 ---
 
-3. In the reservation form add new input in a single reservation entry. It should be selected with the list of all the users. Make this value required in validation - because you need to know who made the reservation.
+### 3. In the reservation form add new input in a single reservation entry. It should be selected with the list of all the users. Make this value required in validation - because you need to know who made the reservation.
 
 ---
 
