@@ -18,14 +18,14 @@ you can reach server at `localhost:3000`
 
 1. Add validation of reservations that will check
 
-- if both `start` and `end` is present and set (will show under single wrong entry)
-- if `end` time is after `start` (will show under single wrong entry)
-- if duration of the reservation is not longer than 2:30h (will show under single wrong entry)
+- if both `start` and `end` is present and set (will show under start/end input - 'Can not be empty')
+- if `end` time is after `start` (will show under end input - 'End time should be after start time')
+- if duration of the reservation is not longer than 2:30h (will show under end input - 'Reservation too long')
   
   #### If all of the above pass you need to check:
   
-- if two reservations on same day do not collide (show this under day's name)
-- if two reservations are not too close - there should be minimum 15min to switch keys (show this under the day's name)
+- if two reservations on same day do not collide (show this under day's name - 'Conflict between two reservations')
+- if two reservations are not too close - there should be minimum 15min to switch keys (show this under the day's name - 'Two reservations too close to each other')
 
 in `src/components/Reservations.jsx` you will see how to setup proper validation errors in both cases
 
