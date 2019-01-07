@@ -12,6 +12,8 @@ To run your project you must run:
 
 or coresponding `npm` commands
 
+you can reach server at `localhost:3000`
+
 ### To finish your MVP you need to achieve those points:
 
 1. Add validation of reservations that will check
