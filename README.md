@@ -51,7 +51,9 @@ Durring implementation you should not bother about huge amounts of loops and rep
 
 ---
 
-### 3. In the reservation form add new input in a single reservation entry. It should be selected with the list of all the users. Make this value required in validation - because you need to know who made the reservation.
+### 3. Connect users store with reservation form
+
+In the reservation form add new input in a single reservation entry. It should be selected with the list of all the users. Make this value required in validation - because you need to know who made the reservation.
 
 ---
 
