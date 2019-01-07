@@ -6,6 +6,8 @@ You need to handle reservations somehow, you used to write it down on a piece of
 
 Let's say that you want to start with a MVP, you want a simple form that allows you to pass the times of reservations per week, you start with one week view that will represent current week's reservations. You decide to use redux-persist to keep the state of reservations on you local computer and redux-form to manage changes. To setup time you have redux-datapicker library - it does not look pretty but it is good enough. To make the page look better you decide to use reactstrap (react bootstrap library), you also have lodash, scss and moment on your project, but you can add anything you wish. You use react-json-view to view the current state of reservations.
 
+(Fork this repository and work on your copy.)
+
 To run your project you must run:
 
 `yarn && yarn start`
@@ -15,6 +17,8 @@ or coresponding `npm` commands
 you can reach server at `localhost:3000`
 
 ### To finish your MVP you need to achieve those points:
+
+---
 
 1. Add validation of reservations that will check
 
@@ -35,6 +39,8 @@ Durring implementation you should not bother about huge amounts of loops and rep
 
 `moment.js` is great library that provide some nice tools to manage with times/dates. Methods that you can help you are `isAfter`, `isBetween`, `add(15, 'minutes')`. Remember - take care of good time parsing (take care of UTC problems if there will be any).
 
+---
+
 2. You need to add additional store for users
 
 - add some router to the project and add additional route for users - eg. /users
@@ -44,6 +50,8 @@ Durring implementation you should not bother about huge amounts of loops and rep
 - show a list of users and add some functionalities to remove them from the store
 - configure proper action creators and reducers
 - list and form can be on one view
+
+---
 
 3. In the reservation form add new input in a single reservation entry. It should be selected with the list of all the users. Make this value required in validation - because you need to know who made the reservation.
 
